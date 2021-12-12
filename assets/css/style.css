@@ -1,9 +1,9 @@
 :root {
     --color1: #2104D9;
     --color2: #7C8EA6;
-    --color3: #D9CB04;
+    --color3: #CFC200;
     --color4: #0D0C00;
-    --color5: #D9B504;
+    --color5: #99980F;
 }
 *{
     margin: 0;
@@ -13,6 +13,7 @@
 
 body{
     background-color: var(--color5);
+    color: var(--color4);
 }
 section, div {
     padding: 20px;
@@ -51,7 +52,13 @@ header nav ul{
 header nav ul li a {
     margin: 0 30px;
     font-weight: normal;
+    padding: 2px;
     font-size: 1.65vw;
+}
+header nav ul li a:hover {
+    background: var(--color1);
+    color: var(--color3);
+    text-shadow: none;
 }
 /* End Header Style */
 
@@ -66,18 +73,19 @@ header nav ul li a {
     justify-content: space-around;
     align-items: flex-end;
     flex-wrap: wrap;
-
 }
+
 .hero img{
-    width: 25%;
-    height: 25%;
-    border: 5px solid white;
+    width: 15%;
+    /* height: 25%; */
+    border: 2px solid var(--color3);
 }
 .hero h2 {
-    color: var(--color3);
+    color: var(--color4);
     background-color: var(--color2);
     padding: 0 20px;
-    border: 1px solid white;
+    border: 1px solid var(--color3);
+    text-align: center;
 }
 /* style body content*/
 .content {
@@ -88,7 +96,7 @@ header nav ul li a {
 }
 .sectionTitle {
     width: 200px;
-    border-right: 5px solid white;
+    border-right: 5px solid var(--color3);
     margin: 0 auto;
 }
 .sectionTitle h2 {
@@ -98,12 +106,18 @@ header nav ul li a {
     margin-right: 10px;
 }
 
-
+.section-content p{
+    font-size: 20px;
+}
 .section-content img{
     opacity: 70%;
-    border: 1px solid black;
+    border: 1px solid var(--color4);
     width: 100%;
     height: 100%;
+}
+.section-content img:hover {
+    opacity: 85%;
+
 }
 .section-content div{
     position: relative;
@@ -136,7 +150,7 @@ header nav ul li a {
 .content section .section-content ul li{
     margin: 0 30px;
     font-weight: normal;
-    font-size: 1.65vw;
+    font-size: 22px;
 }
 .content .section-content {
     width: 100%;
@@ -164,5 +178,103 @@ header nav ul li a {
     header h1 {
         width: 100%;
         text-align: center;
+    }
+    header nav ul li a {
+        font-size: 2.5vw;
+    }
+    .hero img {
+        width: 20%;
+    }
+    p {
+        font-size: 20px;
+    }
+    .content .sectionTitle {
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+/* media Query for tablets and smaller */
+@media screen and (max-width: 768px) {
+    header nav ul{
+        justify-content: center;
+    }
+    header nav ul li{
+        width: 50%;
+        font-size: 25px;
+        text-align: center;
+    }
+    header nav ul li a {
+        font-size: 25px;
+    }
+    .hero img {
+        width: 25%;
+    }
+    .content .section-content div{
+        width: 100%;
+    }
+    .content section .section-content ul li {
+        font-size: 25px;
+    }
+    .section-content h3{
+        left: 5px;
+    }
+    .section-content li {
+        text-align: center;
+        width: 100%;
+        padding: auto;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 575px) {
+    header nav ul li{
+        width: 100%;
+    }
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h2 {
+        width: 100%;
+    }
+    .hero img {
+        width: 30%;
+    }
+    
+    .content section{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .sectionTitle {
+        border-bottom: 5px solid var(--color3);
+        border-right: none;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex: 0 100%;
+    }
+    .sectionTitle h2 {
+        flex: 0 100%;
+        width: 100%;
+        /* padding: auto;
+        margin: auto; */
+    }
+    .section-content ul{
+        justify-content: center;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section-content li {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
     }
 }
