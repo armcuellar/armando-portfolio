@@ -223,6 +223,8 @@ header nav ul li a:hover {
         flex-wrap: wrap;
         text-align: center;
     }
+
+
 }
 
 /* media Query for tablets and smaller */
@@ -321,5 +323,17 @@ header nav ul li a:hover {
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .section-content li {
+        justify-content: left;
+        text-align: justify;
+    }
+
+    .section-content li a {
+        inline-size: 160px;
+        overflow-wrap: break-word;
     }
 }
